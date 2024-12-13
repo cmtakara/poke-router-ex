@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <h1>Pokemon App</h1>
-      <ListDisplay pokeList = {pokemons}/>
+      <ListDisplay pokeList = {pokemons} getPokemons={getPokemons}/>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import pokeball from '../images/pokemon-1536849_1280.png';
 
-function ListDisplay({ pokeList }) {
+function ListDisplay({ pokeList, getPokemons }) {
   return (
     <div>
         <h2>Scan through the list</h2>
@@ -19,6 +19,8 @@ function ListDisplay({ pokeList }) {
                 })
             }
         </ul>
+        {pokeList.previous ? <button onClick={() => getPokemons(pokeList.previous)}>back</button> : <></>} {' '}
+        {pokeList.next ? <button onClick={() => getPokemons(pokeList.next)}>next</button> : <></>}
     </div>
   )
 }
